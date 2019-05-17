@@ -108,38 +108,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YfW-jt-cig">
-                                <rect key="frame" x="149" y="378" width="116" height="140.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YfW-jt-cig">
+                                <rect key="frame" x="20" y="184" width="374" height="140.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soc-z7-Sat" userLabel="Cart Number Label">
-                                        <rect key="frame" x="37" y="0.0" width="42" height="20.5"/>
+                                        <rect key="frame" x="20" y="0.0" width="334" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yR7-CD-sBL" userLabel="Name Text Field">
-                                        <rect key="frame" x="7.5" y="30.5" width="101" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yR7-CD-sBL" userLabel="Name Text Field">
+                                        <rect key="frame" x="20" y="28.5" width="334" height="36"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Address:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NJQ-B9-huq" userLabel="Address Text Field">
-                                        <rect key="frame" x="0.0" y="70.5" width="116" height="30"/>
+                                        <rect key="frame" x="20" y="72.5" width="334" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9d-PH-Waa">
-                                        <rect key="frame" x="12" y="110.5" width="92" height="30"/>
+                                        <rect key="frame" x="141" y="110.5" width="92" height="30"/>
                                         <state key="normal" title="Submit Order"/>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="NJQ-B9-huq" firstAttribute="leading" secondItem="YfW-jt-cig" secondAttribute="leading" constant="20" id="6Gb-tO-2x9"/>
+                                    <constraint firstItem="z9d-PH-Waa" firstAttribute="leading" secondItem="YfW-jt-cig" secondAttribute="leading" constant="141" id="8dR-OA-vNi"/>
+                                    <constraint firstItem="NJQ-B9-huq" firstAttribute="top" secondItem="yR7-CD-sBL" secondAttribute="bottom" constant="8" id="9DI-tK-jgP"/>
+                                    <constraint firstItem="NJQ-B9-huq" firstAttribute="top" secondItem="yR7-CD-sBL" secondAttribute="bottom" constant="8" id="BJb-v8-J5Z"/>
+                                    <constraint firstItem="yR7-CD-sBL" firstAttribute="top" secondItem="soc-z7-Sat" secondAttribute="bottom" constant="8" id="EGz-zm-2Pb"/>
+                                    <constraint firstItem="soc-z7-Sat" firstAttribute="top" secondItem="YfW-jt-cig" secondAttribute="top" id="KHl-fN-Cn2"/>
+                                    <constraint firstItem="z9d-PH-Waa" firstAttribute="top" secondItem="NJQ-B9-huq" secondAttribute="bottom" constant="8" id="KYR-zn-CBd"/>
+                                    <constraint firstAttribute="trailing" secondItem="yR7-CD-sBL" secondAttribute="trailing" constant="20" id="QkS-Ky-dY6"/>
+                                    <constraint firstAttribute="trailing" secondItem="z9d-PH-Waa" secondAttribute="trailing" constant="141" id="Xwa-Pl-NPI"/>
+                                    <constraint firstAttribute="bottom" secondItem="z9d-PH-Waa" secondAttribute="bottom" id="Yuu-3O-lZx"/>
+                                    <constraint firstItem="soc-z7-Sat" firstAttribute="leading" secondItem="YfW-jt-cig" secondAttribute="leading" constant="20" id="dSO-vG-5Uc"/>
+                                    <constraint firstItem="yR7-CD-sBL" firstAttribute="top" secondItem="soc-z7-Sat" secondAttribute="bottom" constant="8" id="fuV-cU-L5w"/>
+                                    <constraint firstAttribute="trailing" secondItem="soc-z7-Sat" secondAttribute="trailing" constant="20" id="fyT-e2-9nZ"/>
+                                    <constraint firstItem="yR7-CD-sBL" firstAttribute="leading" secondItem="YfW-jt-cig" secondAttribute="leading" constant="20" id="pO3-fj-sPz"/>
+                                    <constraint firstAttribute="trailing" secondItem="NJQ-B9-huq" secondAttribute="trailing" constant="20" id="yHb-dt-ygf"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="YfW-jt-cig" firstAttribute="centerY" secondItem="Lnr-6N-n8u" secondAttribute="centerY" id="F1h-KM-rQ6"/>
-                            <constraint firstItem="YfW-jt-cig" firstAttribute="centerX" secondItem="Lnr-6N-n8u" secondAttribute="centerX" id="ipl-C1-lYg"/>
+                            <constraint firstItem="YfW-jt-cig" firstAttribute="top" secondItem="G2I-xp-Ean" secondAttribute="top" constant="96" id="DtW-mb-SOI"/>
+                            <constraint firstItem="G2I-xp-Ean" firstAttribute="trailing" secondItem="YfW-jt-cig" secondAttribute="trailing" constant="20" id="I2Z-Sg-LLj"/>
+                            <constraint firstItem="G2I-xp-Ean" firstAttribute="bottom" secondItem="YfW-jt-cig" secondAttribute="bottom" constant="537.5" id="Sla-qM-TY3"/>
+                            <constraint firstItem="YfW-jt-cig" firstAttribute="leading" secondItem="G2I-xp-Ean" secondAttribute="leading" constant="20" id="Vjy-gV-Vgq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="G2I-xp-Ean"/>
                     </view>
