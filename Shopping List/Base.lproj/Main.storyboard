@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Collection View Controller-->
+        <!--Shopping Item Collection View Controller-->
         <scene sceneID="fAN-ac-CA5">
             <objects>
-                <collectionViewController id="lob-dp-x3U" sceneMemberID="viewController">
+                <collectionViewController id="lob-dp-x3U" customClass="ShoppingItemCollectionViewController" customModule="Shopping_List" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="uHv-8l-2vl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,7 +25,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ListCell" id="kHd-yG-Guy">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ListCell" id="kHd-yG-Guy" customClass="ShoppingItemCollectionViewCell" customModule="Shopping_List" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="140" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -81,6 +81,11 @@
                                     <constraint firstItem="grg-RH-vMY" firstAttribute="leading" secondItem="kHd-yG-Guy" secondAttribute="leading" id="Rxg-qg-8XS"/>
                                     <constraint firstAttribute="bottom" secondItem="grg-RH-vMY" secondAttribute="bottom" id="i7N-TE-OPh"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="addedLabel" destination="i1A-Bp-Fos" id="0XH-GJ-Adc"/>
+                                    <outlet property="imageView" destination="tTj-pZ-8Te" id="hSL-Pf-yLb"/>
+                                    <outlet property="itemNameLabel" destination="4D5-0N-PHi" id="hFd-Eu-PXq"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -100,10 +105,10 @@
             </objects>
             <point key="canvasLocation" x="1310.144927536232" y="119.86607142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Shopping Cart View Controller-->
         <scene sceneID="dTG-AO-yGh">
             <objects>
-                <viewController id="TrI-a5-kDM" sceneMemberID="viewController">
+                <viewController id="TrI-a5-kDM" customClass="ShoppingCartViewController" customModule="Shopping_List" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lnr-6N-n8u">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -132,6 +137,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9d-PH-Waa">
                                         <rect key="frame" x="141" y="110.5" width="92" height="30"/>
                                         <state key="normal" title="Submit Order"/>
+                                        <connections>
+                                            <action selector="submitOrder:" destination="TrI-a5-kDM" eventType="touchUpInside" id="1VC-cV-eEq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -162,6 +170,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="G2I-xp-Ean"/>
                     </view>
+                    <connections>
+                        <outlet property="addressTextField" destination="NJQ-B9-huq" id="Ed0-2k-xvT"/>
+                        <outlet property="cartNumberLabel" destination="soc-z7-Sat" id="YuS-Vo-bJP"/>
+                        <outlet property="nameTextField" destination="yR7-CD-sBL" id="2AP-mu-0Wd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhr-Y1-rSB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
