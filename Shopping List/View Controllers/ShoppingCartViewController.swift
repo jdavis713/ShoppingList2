@@ -12,6 +12,7 @@ class ShoppingCartViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        submitOrder.layer.cornerRadius = 4
         updateViews()
     }
     
@@ -43,6 +44,7 @@ class ShoppingCartViewController: UIViewController {
     
     var shoppingItemController: ShoppingItemController?
     
+    @IBOutlet var submitOrder: UIButton!
     @IBOutlet var cartNumberLabel: UILabel!
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var addressTextField: UITextField!

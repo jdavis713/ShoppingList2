@@ -81,4 +81,15 @@ class ShoppingItemController {
         return finalURL
     }
     
+    //Stretch Goal - Separating added/not added items
+//    var addedItems: [ShoppingItem] {
+//        let added = shoppingItems.filter ( { $0.isOnList == true } )
+//        return added
+//    }
+//    
+//    var unaddedItems: [ShoppingItem] {
+//        let unadded = shoppingItems.filter( { $0.isOnList == false } )
+//        return unadded
+//    }
+    
 }

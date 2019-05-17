@@ -34,6 +34,11 @@ class ShoppingItemCollectionViewController: UICollectionViewController {
  
 
     // MARK: UICollectionViewDataSource
+    
+    //Stretch Goal - Separating added/ not added items
+//    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+//        return 2
+//    }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
@@ -49,6 +54,14 @@ class ShoppingItemCollectionViewController: UICollectionViewController {
         shoppingItemCollectionCell.shoppingItem = shoppingItemController.shoppingItems[indexPath.item] 
         return cell
     }
+    
+    //MARK: Stretch Goal - Separating added/ not added items
+//    func collectionView(_ collectionView: UICollectionView, titleForHeaderInSection section: Int) -> String? {
+//        let added = shoppingItemController.addedItems.isEmpty ? nil : "Added Items"
+//        let unadded = shoppingItemController.unaddedItems.isEmpty ? nil : "Not Added Items"
+//        
+//        return section == 0 ? added : unadded
+//    }
 
     //MARK: -Properties
     
